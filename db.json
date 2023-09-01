@@ -1,0 +1,328 @@
+[
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2023-09-01T12:19:48.861Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "test1@ya.ru",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2023-09-01T12:25:06.411Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "2",
+    "object_repr": "Марафон за год",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2023-09-01T12:27:14.252Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "3",
+    "object_repr": "1 километр за 4 минуты",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2023-09-01T12:28:34.847Z",
+    "user": 1,
+    "content_type": 7,
+    "object_id": "4",
+    "object_repr": "Бег. Первые шаги",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2023-09-01T12:29:47.208Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "1",
+    "object_repr": "Бег на 100 метров",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0443\\u0440\\u0441\", \"\\u041e\\u043f\\u0438\\u0441\\u0430\\u043d\\u0438\\u0435 \\u0443\\u0440\\u043e\\u043a\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2023-09-01T12:30:52.938Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "3",
+    "object_repr": "Подготовительный месяц",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2023-09-01T12:32:34.141Z",
+    "user": 1,
+    "content_type": 8,
+    "object_id": "4",
+    "object_repr": "Как выбрать кроссовки?",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2023-09-01T12:33:36.727Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "2",
+    "object_repr": " 2023-09-01 Марафон за год - 5000 руб.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2023-09-01T12:34:09.104Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "3",
+    "object_repr": " 2023-08-01 1 километр за 4 минуты - 1000 руб.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2023-09-01T12:34:35.631Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "4",
+    "object_repr": " 2022-09-01 Бег. Первые шаги - 5000 руб.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2023-09-01T12:34:59.258Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "5",
+    "object_repr": "Greta 2023-08-11 Подготовительный месяц - 1000 руб.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2023-09-01T12:35:19.973Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "6",
+    "object_repr": "Greta 2023-01-01 Бег. Первые шаги - 5000 руб.",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "bezwslmqrx4fabb4gp1qjr0ghn8subgk",
+  "fields": {
+    "session_data": ".eJxVjEEOgjAQRe_StWnaYQrUpXvP0ExnpoIaSCisjHdXEha6_e-9_zKJtnVIW9UljWLOxpvT75aJHzrtQO403WbL87QuY7a7Yg9a7XUWfV4O9-9goDp8ayBHnJuMvYLEHtVHwBy0OGkZm0YiooLzzKydCxS9Ky34rhB4ZAjm_QHq2Te1:1qc2yR:8QeJgowZbPqPcHlb9sU9CLSbwv9IYiYR46SOjISpP10",
+    "expire_date": "2023-09-15T12:10:03.705Z"
+  }
+},
+{
+  "model": "users.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$wIu7I1X79bKDfPukNdgovk$t2L6x3RikhVcSdYUs3Q11FVbjcLRH9cOdo75mKnLNw8=",
+    "last_login": "2023-09-01T12:10:03.701Z",
+    "is_superuser": true,
+    "username": "",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-09-01T12:09:48.638Z",
+    "email": "sergeyfedorov13@yandex.ru",
+    "phone": null,
+    "avatar": "",
+    "country": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "users.user",
+  "pk": 2,
+  "fields": {
+    "password": "1234",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "Greta",
+    "first_name": "",
+    "last_name": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-09-01T12:19:07Z",
+    "email": "test1@ya.ru",
+    "phone": null,
+    "avatar": "",
+    "country": null,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "course.course",
+  "pk": 2,
+  "fields": {
+    "title": "Марафон за год",
+    "description": "Подготовка к марафону за 365 дней. Курс поможет вам пройти от уровня новичка до марафонца. Здесь ты узнаешь всё про подготовку к дистанции 42.195 километров.",
+    "image": "course/course/i.webp"
+  }
+},
+{
+  "model": "course.course",
+  "pk": 3,
+  "fields": {
+    "title": "1 километр за 4 минуты",
+    "description": "Курс научит вас пробегать 1 километр  за 4 минуты всего за 100 дней. Вся информация о быстром беге, подводящих упражнениях только у нас.",
+    "image": "course/course/moment-razgona.jpg"
+  }
+},
+{
+  "model": "course.course",
+  "pk": 4,
+  "fields": {
+    "title": "Бег. Первые шаги",
+    "description": "Грамотный старт в беговых тренировках. С нашим курсом вы поймёте, как начать бегать и при этом не закончить после первой пробежки.",
+    "image": "course/course/scale_1200.webp"
+  }
+},
+{
+  "model": "course.lesson",
+  "pk": 1,
+  "fields": {
+    "course": 3,
+    "title": "Бег на 100 метров",
+    "description": "Как бегать на 100 метров очень быстро (за 12 секунд). Простой гайд для новичков.",
+    "image": "course/lesson/img.png",
+    "video_link": "https://www.youtube.com/watch?v=zsv7Tjpw-2o"
+  }
+},
+{
+  "model": "course.lesson",
+  "pk": 3,
+  "fields": {
+    "course": 2,
+    "title": "Подготовительный месяц",
+    "description": "Научим вас грамотно разложить силы перед своим первым марафоном.  Подводка к главному забегу года.",
+    "image": "course/lesson/i.webp",
+    "video_link": "https://www.youtube.com/watch?v=zsv7Tjpw-2o"
+  }
+},
+{
+  "model": "course.lesson",
+  "pk": 4,
+  "fields": {
+    "course": 4,
+    "title": "Как выбрать кроссовки?",
+    "description": "Подробная инструкция о беговой обуви. От дешевых моделей за 2000 рублей, до профессиональных моделей.",
+    "image": "course/lesson/i_1.webp",
+    "video_link": "https://www.youtube.com/watch?v=w7iMFYY7g08&pp=ygUa0L7QsdGD0LLRjCDQtNC70Y8g0LHQtdCz0LA%3D"
+  }
+},
+{
+  "model": "course.payment",
+  "pk": 2,
+  "fields": {
+    "user": 1,
+    "date": "2023-09-01",
+    "course": 2,
+    "lesson": null,
+    "amount": 5000,
+    "method": "card"
+  }
+},
+{
+  "model": "course.payment",
+  "pk": 3,
+  "fields": {
+    "user": 1,
+    "date": "2023-08-01",
+    "course": 3,
+    "lesson": null,
+    "amount": 1000,
+    "method": "card"
+  }
+},
+{
+  "model": "course.payment",
+  "pk": 4,
+  "fields": {
+    "user": 1,
+    "date": "2022-09-01",
+    "course": 4,
+    "lesson": null,
+    "amount": 5000,
+    "method": "cash"
+  }
+},
+{
+  "model": "course.payment",
+  "pk": 5,
+  "fields": {
+    "user": 2,
+    "date": "2023-08-11",
+    "course": null,
+    "lesson": 3,
+    "amount": 1000,
+    "method": "card"
+  }
+},
+{
+  "model": "course.payment",
+  "pk": 6,
+  "fields": {
+    "user": 2,
+    "date": "2023-01-01",
+    "course": 4,
+    "lesson": null,
+    "amount": 5000,
+    "method": "card"
+  }
+}
+]
