@@ -5,3 +5,14 @@
 - DB_NAME=
 - DB_USERNAME=
 - DB_PASSWORD=
+
+Заполнение данными из db.json:
+
+- python manage.py loaddata db.json 
+
+Ссылки для проверки:
+- /courses
+- /payment/?ordering=date
+- /payment/?course=3
+- /payment/?lesson=3
+
