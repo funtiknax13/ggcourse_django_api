@@ -35,6 +35,7 @@ class CustomUserManager(BaseUserManager):
 
 # Create your models here.
 class User(AbstractUser):
+    username = None
     email = models.EmailField(unique=True, verbose_name='почта')
 
     phone = models.CharField(max_length=25, verbose_name='телефон', **NULLABLE)

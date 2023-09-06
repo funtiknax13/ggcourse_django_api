@@ -1,3 +1,4 @@
+from django.conf import settings
 from django.db import models
 
 from users.models import User
@@ -6,6 +7,7 @@ NULLABLE = {'null': True, 'blank': True}
 
 
 class Course(models.Model):
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, **NULLABLE)
     title = models.CharField(max_length=100, verbose_name='название курса')
     description = models.TextField(verbose_name='описание курса')
     image = models.ImageField(upload_to='course/course', verbose_name='превью курса')
@@ -19,11 +21,12 @@ class Course(models.Model):
 
 
 class Lesson(models.Model):
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, **NULLABLE)
     course = models.ForeignKey(Course, on_delete=models.SET_NULL, verbose_name='курс', **NULLABLE)
     title = models.CharField(max_length=100, verbose_name='название урока')
     description = models.TextField(verbose_name='описание урока')
-    image = models.ImageField(upload_to='course/lesson', verbose_name='превью урока')
-    video_link = models.CharField(max_length=500, verbose_name='ссылка на видео')
+    image = models.ImageField(upload_to='course/lesson', verbose_name='превью урока', **NULLABLE)
+    video_link = models.CharField(max_length=500, verbose_name='ссылка на видео', **NULLABLE)
 
     def __str__(self):
         return self.title
