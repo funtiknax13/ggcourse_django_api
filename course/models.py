@@ -10,7 +10,7 @@ class Course(models.Model):
     owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, **NULLABLE)
     title = models.CharField(max_length=100, verbose_name='название курса')
     description = models.TextField(verbose_name='описание курса')
-    image = models.ImageField(upload_to='course/course', verbose_name='превью курса')
+    image = models.ImageField(upload_to='course/course', verbose_name='превью курса', **NULLABLE)
 
     def __str__(self):
         return self.title
@@ -56,3 +56,14 @@ class Payment(models.Model):
         verbose_name = 'Платёж'
         verbose_name_plural = 'Платежи'
 
+
+class Subscription(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='пользователь')
+    course = models.ForeignKey(Course, on_delete=models.CASCADE, verbose_name='курс')
+
+    def __str__(self):
+        return f'{self.user.email} - {self.course.title}'
+
+    class Meta:
+        verbose_name = 'Подписка'
+        verbose_name_plural = 'Подписки'
