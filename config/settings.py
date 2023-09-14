@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'django_filters',
     'rest_framework_simplejwt',
+    'drf_yasg',
 
 
     'users',
@@ -155,4 +156,6 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
 }
 
+
+STRIPE_KEY = os.getenv('STRIPE_KEY')
 

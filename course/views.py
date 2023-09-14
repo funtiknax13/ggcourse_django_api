@@ -1,3 +1,5 @@
+import datetime
+
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import OrderingFilter
 from rest_framework import viewsets, generics
@@ -9,6 +11,7 @@ from course.models import Course, Lesson, Payment, Subscription
 from course.paginators import CoursePaginator, LessonPaginator
 from course.permissions import IsNotModerator, IsOwnerOrModerator
 from course.serializers import CourseSerializer, LessonSerializer, PaymentSerializer, SubscriptionSerializer
+from course.services import create_payment
 
 
 class CourseCreateAPIView(generics.CreateAPIView):
@@ -83,6 +86,12 @@ class SubscriptionAPIView(APIView):
     permission_classes = [IsAuthenticated, ]
 
     def get(self, request, pk):
+        """
+            Subscribe for the course.
+            ---
+            parameters:
+            - id: course_id
+            """
         user = request.user
         course = Course.objects.get(pk=pk)
         is_subscription = Subscription.objects.filter(user=user, course=course).exists()
@@ -102,5 +111,29 @@ class PaymentListAPIView(generics.ListAPIView):
     filterset_fields = ('course', 'lesson', 'method')
     ordering_fields = ('date', )
     permission_classes = [IsAuthenticated, ]
+
+
+class PaymentCreateAPIView(APIView):
+    permission_classes = [IsAuthenticated, ]
+
+    def get(self, request, pk):
+        """
+            Pay for the course.
+            ---
+            parameters:
+            - id: course_id
+        """
+        course = Course.objects.get(pk=pk)
+        price = 2000
+        response = create_payment(course, price)
+        if response:
+            Payment.objects.create(user=request.user,
+                                   date=datetime.date.today(),
+                                   course=course,
+                                   method='card',
+                                   amount=price/100)
+            return Response({'payment_url': response})
+        else:
+            return Response({'error': 'Ошибка платежа'})
 
 

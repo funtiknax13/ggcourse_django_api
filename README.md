@@ -6,6 +6,10 @@
 - DB_USERNAME=
 - DB_PASSWORD=
 
+Ключ STRIPE
+
+- STRIPE_KEY
+
 Заполнение данными из db.json:
 
 - python manage.py loaddata db.json 
@@ -15,4 +19,5 @@
 - /payment/?ordering=date
 - /payment/?course=3
 - /payment/?lesson=3
+- /course/2/pay/ (Оплата через stripe)
 
