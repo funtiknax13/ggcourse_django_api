@@ -23,7 +23,6 @@ class CourseSerializer(serializers.ModelSerializer):
 
     def get_subscription(self, obj):
         request = self.context.get('request')
-        print(request.user, obj.subscription_set.all())
         for subscription in obj.subscription_set.all():
             if request.user == subscription.user:
                 return True

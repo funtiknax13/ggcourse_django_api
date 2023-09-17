@@ -12,6 +12,7 @@ from course.paginators import CoursePaginator, LessonPaginator
 from course.permissions import IsNotModerator, IsOwnerOrModerator
 from course.serializers import CourseSerializer, LessonSerializer, PaymentSerializer, SubscriptionSerializer
 from course.services import create_payment
+from course.tasks import send_course_update_message
 
 
 class CourseCreateAPIView(generics.CreateAPIView):
@@ -51,6 +52,16 @@ class CourseUpdateAPIView(generics.UpdateAPIView):
     serializer_class = CourseSerializer
     queryset = Course.objects.all()
     permission_classes = [IsAuthenticated, IsOwnerOrModerator]
+
+    def update(self, request, *args, **kwargs):
+        course = Course.objects.get(pk=kwargs['pk'])
+        subscribers = Subscription.objects.filter(course=course)
+        subscribers_email = []
+        for subscriber in subscribers:
+            subscribers_email.append(subscriber.user.email)
+        message = f'Курс "{course.title}" обновлен'
+        send_course_update_message.delay('Обновление курса', message, subscribers_email)
+        return super().update(request, *args, **kwargs)
 
 
 class CourseDestroyAPIView(generics.DestroyAPIView):
