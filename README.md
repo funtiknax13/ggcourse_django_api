@@ -1,12 +1,6 @@
 Для запуска необходимо создать файл .env в папке проекта и задать следующие переменные:
 
 ```
-Данные для доступа к БД:
-
-- DB_NAME=
-- DB_USERNAME=
-- DB_PASSWORD=
-
 Ключ STRIPE
 
 - STRIPE_KEY
@@ -26,6 +20,10 @@
 ```
 _Для создания образа из Dockerfile и запуска контейнера:_
 ```
-docker build -t app-name .
-docker run app-name
+docker compose build
+docker compose up
+```
+_Для применения миграций в контейнере:_
+```
+docker compose exec app python manage.py migrate
 ```
